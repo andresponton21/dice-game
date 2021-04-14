@@ -1,0 +1,9 @@
+body{
+    font: 1.5em system-ui;
+    text-align: center;
+}
+.diceface{
+    border: 0.5em solid black;
+    max-width: 20em;
+    border-radius: 0.5em;
+}

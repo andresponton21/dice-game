@@ -10,8 +10,20 @@ const getRandomDiceRoll = function(sides=6) {
 console.log(getRandomDiceRoll())
 
 // 1) Call getRandomDiceRoll() and store the result as a variable named "diceRoll"
+const diceface = document.querySelector('.diceface')
+const roll = document.querySelector(`.roll`)
+const rollnum = document.querySelector(`.rollnum`)
 
 // 2) Update user interface (document), showing the diceface (svg image) that matches the roll number
+const rollTheDice = () => {
+const diceRoll = getRandomDiceRoll()
+diceface.setAttribute(`src`, `../img/dice${diceRoll}.svg`)
+rollnum.textContent=diceRoll
+
+  
+}
+
+roll.addEventListener( `click`, rollTheDice)
 
 // 3) Use `diceRoll` to update the label "You rolled: #" (replacing # with the roll)
 
